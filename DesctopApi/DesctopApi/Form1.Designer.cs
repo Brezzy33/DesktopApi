@@ -32,9 +32,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
             this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroRadioButton6 = new MetroFramework.Controls.MetroRadioButton();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
@@ -49,6 +49,9 @@
             this.metroRadioButton7 = new MetroFramework.Controls.MetroRadioButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.labelHour = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -82,15 +85,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Смена картинок";
             // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(518, 489);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(158, 23);
-            this.metroButton2.TabIndex = 3;
-            this.metroButton2.Text = "Выбрать файл";
-            this.metroButton2.UseSelectable = true;
-            // 
             // metroRadioButton2
             // 
             this.metroRadioButton2.AutoSize = true;
@@ -104,15 +98,28 @@
             // metroRadioButton1
             // 
             this.metroRadioButton1.AutoSize = true;
+            this.metroRadioButton1.Checked = true;
             this.metroRadioButton1.Location = new System.Drawing.Point(7, 20);
             this.metroRadioButton1.Name = "metroRadioButton1";
             this.metroRadioButton1.Size = new System.Drawing.Size(73, 15);
             this.metroRadioButton1.TabIndex = 0;
+            this.metroRadioButton1.TabStop = true;
             this.metroRadioButton1.Text = "Вручную";
             this.metroRadioButton1.UseSelectable = true;
             // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(354, 489);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(158, 23);
+            this.metroButton2.TabIndex = 3;
+            this.metroButton2.Text = "Выбрать файл";
+            this.metroButton2.UseSelectable = true;
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.labelHour);
             this.groupBox2.Controls.Add(this.metroRadioButton6);
             this.groupBox2.Controls.Add(this.numericUpDown2);
             this.groupBox2.Controls.Add(this.numericUpDown1);
@@ -136,14 +143,19 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(108, 67);
+            this.numericUpDown2.Location = new System.Drawing.Point(88, 65);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(41, 20);
             this.numericUpDown2.TabIndex = 1;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(22, 67);
+            this.numericUpDown1.Location = new System.Drawing.Point(10, 65);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(41, 20);
             this.numericUpDown1.TabIndex = 1;
@@ -151,10 +163,12 @@
             // metroRadioButton5
             // 
             this.metroRadioButton5.AutoSize = true;
+            this.metroRadioButton5.Checked = true;
             this.metroRadioButton5.Location = new System.Drawing.Point(7, 18);
             this.metroRadioButton5.Name = "metroRadioButton5";
             this.metroRadioButton5.Size = new System.Drawing.Size(95, 15);
             this.metroRadioButton5.TabIndex = 0;
+            this.metroRadioButton5.TabStop = true;
             this.metroRadioButton5.Text = "При загрузке";
             this.metroRadioButton5.UseSelectable = true;
             // 
@@ -182,10 +196,12 @@
             // metroRadioButton3
             // 
             this.metroRadioButton3.AutoSize = true;
+            this.metroRadioButton3.Checked = true;
             this.metroRadioButton3.Location = new System.Drawing.Point(7, 20);
             this.metroRadioButton3.Name = "metroRadioButton3";
             this.metroRadioButton3.Size = new System.Drawing.Size(121, 15);
             this.metroRadioButton3.TabIndex = 0;
+            this.metroRadioButton3.TabStop = true;
             this.metroRadioButton3.Text = "Последовательно";
             this.metroRadioButton3.UseSelectable = true;
             // 
@@ -214,10 +230,12 @@
             // metroRadioButton8
             // 
             this.metroRadioButton8.AutoSize = true;
+            this.metroRadioButton8.Checked = true;
             this.metroRadioButton8.Location = new System.Drawing.Point(7, 39);
             this.metroRadioButton8.Name = "metroRadioButton8";
             this.metroRadioButton8.Size = new System.Drawing.Size(121, 15);
             this.metroRadioButton8.TabIndex = 0;
+            this.metroRadioButton8.TabStop = true;
             this.metroRadioButton8.Text = "Реальный размер";
             this.metroRadioButton8.UseSelectable = true;
             // 
@@ -242,19 +260,47 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(689, 489);
+            this.metroButton1.Location = new System.Drawing.Point(518, 489);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(158, 23);
             this.metroButton1.TabIndex = 3;
             this.metroButton1.Text = "Применить";
             this.metroButton1.UseSelectable = true;
             // 
+            // metroButton3
+            // 
+            this.metroButton3.Location = new System.Drawing.Point(689, 489);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(158, 23);
+            this.metroButton3.TabIndex = 3;
+            this.metroButton3.Text = "Выйти";
+            this.metroButton3.UseSelectable = true;
+            // 
+            // labelHour
+            // 
+            this.labelHour.AutoSize = true;
+            this.labelHour.Location = new System.Drawing.Point(54, 72);
+            this.labelHour.Name = "labelHour";
+            this.labelHour.Size = new System.Drawing.Size(27, 13);
+            this.labelHour.TabIndex = 10;
+            this.labelHour.Text = "Час";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(132, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Мин";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 528);
+            this.ClientSize = new System.Drawing.Size(866, 525);
             this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.groupBox4);
@@ -303,6 +349,9 @@
         private MetroFramework.Controls.MetroRadioButton metroRadioButton9;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton8;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelHour;
+        private MetroFramework.Controls.MetroButton metroButton3;
     }
 }
 
